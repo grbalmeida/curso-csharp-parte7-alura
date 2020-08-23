@@ -7,9 +7,26 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
-            TestaListaDeContaCorrente();
+            TestaListaDeObject();   
 
             Console.ReadLine();
+        }
+
+        static void TestaListaDeObject()
+        {
+            ListaDeObject listaDeIdades = new ListaDeObject();
+
+            listaDeIdades.Adicionar(10);
+            listaDeIdades.Adicionar(5);
+            // listaDeIdades.Adicionar("um texto qualquer");
+            listaDeIdades.AdicionarVarios(16, 23, 60);
+
+            for (int i = 0; i < listaDeIdades.Tamanho; i++)
+            {
+                int idade = (int)listaDeIdades[i];
+
+                Console.WriteLine($"Idade no indíce {i}: {idade}");
+            }
         }
 
         static int SomarVarios(params int[] numeros)
