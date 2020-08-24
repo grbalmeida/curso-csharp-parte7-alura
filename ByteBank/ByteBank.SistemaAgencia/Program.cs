@@ -7,7 +7,10 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
-            TestaListaDeObject();   
+            Lista<int> idades = new Lista<int>();
+
+            idades.Adicionar(5);
+            idades.AdicionarVarios(1, 5, 78);
 
             Console.ReadLine();
         }
