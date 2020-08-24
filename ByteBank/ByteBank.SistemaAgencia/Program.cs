@@ -12,6 +12,21 @@ namespace ByteBank.SistemaAgencia
             idades.Adicionar(5);
             idades.AdicionarVarios(1, 5, 78);
 
+            for (int i = 0; i < idades.Tamanho; i++)
+            {
+                Console.WriteLine(idades[i]);
+            }
+
+            idades.Remover(5);
+            idades.Remover(78);
+            idades.Remover(5);
+            Console.WriteLine("-----------------------------");
+
+            for (int i = 0; i < idades.Tamanho; i++)
+            {
+                Console.WriteLine(idades[i]);
+            }
+
             Console.ReadLine();
         }
 
